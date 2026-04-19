@@ -1,0 +1,73 @@
+.search-wrap {
+  position: relative; margin-bottom: 10px;
+}
+.search-ico {
+  position: absolute; left: 12px; top: 50%;
+  transform: translateY(-50%); color: var(--text-2); pointer-events: none;
+}
+.search-input {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 10px 14px 10px 34px;
+  font-size: 14px; color: var(--text);
+  transition: border-color .2s;
+}
+.search-input:focus { outline: none; border-color: var(--border-hi); }
+.search-input::placeholder { color: var(--text-4); }
+
+.type-filter-row {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.type-filter-btn {
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-2);
+  transition: all .15s;
+}
+.type-filter-btn.on {
+  background: var(--emerald-dim);
+  border-color: rgba(45,212,160,.35);
+  color: var(--emerald);
+}
+
+.month-group { margin-bottom: 24px; }
+
+.month-label {
+  font-family: var(--font-display);
+  font-size: 15px; font-weight: 300;
+  color: var(--text-2);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.journal-entry-wrap { position: relative; }
+
+.del-btn {
+  position: absolute; bottom: 12px; right: 36px;
+  display: flex; align-items: center; gap: 4px;
+  padding: 3px 9px;
+  border-radius: 100px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  color: var(--text-3);
+  font-size: 10px;
+  opacity: 0;
+  transition: all .15s;
+  cursor: pointer;
+}
+.journal-entry-wrap:hover .del-btn,
+.journal-entry-wrap:focus-within .del-btn { opacity: 1; }
+.del-btn.confirm {
+  background: var(--rose-dim);
+  border-color: rgba(255,107,138,.35);
+  color: var(--rose);
+  opacity: 1;
+}
+@media (hover:none) { .del-btn { opacity: 1; } }

@@ -1,0 +1,66 @@
+.settings-tabs {
+  display: flex; gap: 5px; flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.settings-tab {
+  padding: 7px 13px;
+  border-radius: 100px;
+  font-size: 12px; font-weight: 500;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-2);
+  transition: all .15s;
+}
+
+.settings-tab.on {
+  background: var(--emerald-dim);
+  border-color: rgba(45,212,160,.35);
+  color: var(--emerald);
+}
+
+.settings-row {
+  display: flex; align-items: center;
+  gap: 10px; margin-bottom: 8px;
+}
+
+.settings-row-icon { font-size: 18px; flex-shrink: 0; }
+
+.settings-row-info {
+  flex: 1; display: flex; flex-direction: column; gap: 2px;
+}
+
+.settings-row-label { font-size: 13px; font-weight: 500; color: var(--text); }
+.settings-row-sub   { font-size: 11px; color: var(--text-2); }
+.settings-row-val   { font-size: 13px; color: var(--text-2); flex-shrink: 0; }
+
+.settings-empty {
+  font-size: 13px; color: var(--text-2);
+  margin-bottom: 12px;
+}
+
+.settings-info {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 14px;
+  margin-bottom: 8px;
+}
+
+.settings-info p {
+  font-size: 13px; color: var(--text-2); line-height: 1.6;
+}
+
+.add-form { margin-bottom: 8px; }
+
+.data-btns {
+  display: flex; flex-direction: column; gap: 8px;
+  margin-bottom: 8px;
+}
+
+.data-btns .btn {
+  justify-content: center;
+  width: 100%;
+}
+
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
